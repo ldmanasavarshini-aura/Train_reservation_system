@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise Rail Booking Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1><span>🚄</span> NexusRail Enterprise</h1>
+        <nav class="nav-tabs">
+            <button class="tab-btn active" onclick="switchPanel('booking-panel')">Book Tickets</button>
+            <button class="tab-btn" onclick="switchPanel('admin-panel')">Train Management</button>
+        </nav>
+    </header>
+
+    <main>
+        <section id="booking-panel" class="panel active">
+            <div class="card">
+                <div class="card-title">Search & Reserve Train Tickets</div>
+                <form id="bookingForm">
+                    <div class="form-grid">
+                        <div class="form-group full-width">
+                            <label for="passengerName">Passenger Full Name</label>
+                            <input type="text" id="passengerName" name="passengerName" required placeholder="e.g. Jane Doe">
+                        </div>
+                        <div class="form-group">
+                            <label for="trainNumberBook">Train Number ID</label>
+                            <input type="text" id="trainNumberBook" name="trainNumber" required placeholder="e.g. 12345">
+                        </div>
+                        <div class="form-group">
+                            <label for="travelDate">Date of Journey</label>
+                            <input type="date" id="travelDate" name="travelDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="classType">Travel Preference Class</label>
+                            <select id="classType" name="classType">
+                                <option value="AC First Class (1A)">AC First Class (1A)</option>
+                                <option value="AC 2 Tier (2A)">AC 2 Tier (2A)</option>
+                                <option value="Sleeper Class (SL)">Sleeper Class (SL)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="seatCount">Number of Seats</label>
+                            <input type="number" id="seatCount" name="seatCount" required value="1" min="1" max="10">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Reserve Ticket Now</button>
+                </form>
+            </div>
+        </section>
+
+        <section id="admin-panel" class="panel">
+            <div class="card">
+                <div class="card-title">Register / Update System Schedules</div>
+                <form id="adminForm">
+                    <div class="form-grid">
+                        <div class="form-group">
+                            <label for="trainNumber">Train Identifier Number</label>
+                            <input type="text" id="trainNumber" name="trainNumber" required placeholder="e.g. 12345">
+                        </div>
+                        <div class="form-group">
+                            <label for="trainName">Official Train Designation</label>
+                            <input type="text" id="trainName" name="trainName" required placeholder="e.g. Kovai Express">
+                        </div>
+                        <div class="form-group">
+                            <label for="source">Origin Station Terminus</label>
+                            <input type="text" id="source" name="source" required placeholder="e.g. Chennai">
+                        </div>
+                        <div class="form-group">
+                            <label for="destination">Destination Terminal Point</label>
+                            <input type="text" id="destination" name="destination" required placeholder="e.g. Coimbatore">
+                        </div>
+                        <div class="form-group">
+                            <label for="totalSeats">Allotted Total Seat Capacity</label>
+                            <input type="number" id="totalSeats" name="totalSeats" required value="60" min="1">
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Provision Data Asset</button>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
