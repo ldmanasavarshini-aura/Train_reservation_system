@@ -1,9 +1,9 @@
-function switchPanel(panelId) {
+function switchPanel(panelId, button) {
     document.querySelectorAll('.panel').forEach(panel => panel.classList.remove('active'));
     document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
     
     document.getElementById(panelId).classList.add('active');
-    if(event) event.currentTarget.classList.add('active');
+    button.classList.add('active');
 }
 
 // Intercept Ticket Booking
@@ -11,7 +11,7 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new URLSearchParams(new FormData(this));
     
-    fetch('http://localhost:8080/book', {
+    fetch('/book', {
         method: 'POST',
         body: formData
     })
@@ -25,7 +25,7 @@ document.getElementById('adminForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new URLSearchParams(new FormData(this));
     
-    fetch('http://localhost:8080/update-train', {
+    fetch('/update-train', {
         method: 'POST',
         body: formData
     })
