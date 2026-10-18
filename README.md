@@ -19,6 +19,16 @@ Developed a full-stack Train Reservation System that enables passengers to book 
 - Java HTTP Server API
 - HashMap Collections Framework
 
+## Run Locally
+
+Install Java and Node.js, then run:
+
+```sh
+npm run dev
+```
+
+Open http://localhost:8080 in your browser. The server keeps reservation data in memory while it is running.
+
 ## Skills Demonstrated
 - Object-Oriented Programming (OOP)
 - Backend Development
