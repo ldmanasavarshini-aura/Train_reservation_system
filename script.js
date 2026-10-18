@@ -11,7 +11,7 @@ document.getElementById('bookingForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new URLSearchParams(new FormData(this));
     
-    fetch('/book', {
+    fetch('/api/book', {
         method: 'POST',
         body: formData
     })
@@ -25,7 +25,7 @@ document.getElementById('adminForm').addEventListener('submit', function(e) {
     e.preventDefault();
     const formData = new URLSearchParams(new FormData(this));
     
-    fetch('/update-train', {
+    fetch('/api/update-train', {
         method: 'POST',
         body: formData
     })

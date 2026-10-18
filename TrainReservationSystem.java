@@ -42,6 +42,8 @@ public class TrainReservationSystem {
 
         HttpServer server = HttpServer.create(new InetSocketAddress(8080), 0);
         server.createContext("/", new StaticHandler());
+        server.createContext("/api/book", new BookingHandler());
+        server.createContext("/api/update-train", new TrainUpdateHandler());
         server.createContext("/book", new BookingHandler());
         server.createContext("/update-train", new TrainUpdateHandler());
         server.setExecutor(null); 

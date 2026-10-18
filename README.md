@@ -29,6 +29,12 @@ npm run dev
 
 Open http://localhost:8080 in your browser. The server keeps reservation data in memory while it is running.
 
+## Deploy to Vercel
+
+Import this repository as a Vercel project and deploy the `main` branch. The static site is served from the repository root, and the booking endpoints run as Vercel Node.js functions. Vercel's project must be connected to this GitHub repository for pushes to create deployments.
+
+Reservations use in-memory storage, so data is temporary and may reset when the server or function instance restarts. Use a persistent database before relying on this app for real reservations.
+
 ## Skills Demonstrated
 - Object-Oriented Programming (OOP)
 - Backend Development
