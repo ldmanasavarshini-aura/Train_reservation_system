@@ -3,6 +3,6 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "javac -source 8 -target 8 TrainReservationSystem.java && java -cp . TrainReservationSystem"
+    "dev": "node dev.js"
   }
 }
